@@ -29,12 +29,12 @@ Research techniques to ensure the back-end is functioning effectively
 
 ##Dynamic Search (only if time)
 
-Allow user to input a regular text string and have that string converted in a form the backend can recognize and search for.  This will most likely need a Search API, in which case it should take about 5 days to set up.  Otherwise it'll take a while
+Allow user to input a regular text string and have that string converted in a form the backend can recognize and search for.  This will most likely need a Search API, in which case it should take about 5 days to set up.  Otherwise it'll take a while.
 
 
 ##International Search (only if time)
 
-Check availability in different regions for content. Again, will require a search API. 
+Check availability in different regions for content. Again, will require a search API, and will take 4ish days.
 
 
 
