@@ -1,53 +1,66 @@
-<html><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
-  </head><body>
-    <div class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><span>Rock Chalk JayMovies</span></a>
-        </div>
-        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active">
-              <a href="index.html">Home</a>
-            </li>
-            
-          </ul>
-        </div>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+  <script>
+  $(document).ready(function() {
+    $("#searchButton").click(function() {
+      var inputFromSearch = document.getElementById('input').value;
+      //if (inputFromSearch == 'starwars'){          
+      window.open("movie.html", "_self");
+      //};
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span>Rock Chalk JayMovies</span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="index.html">Home</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="cover">
-      <div class="cover-image"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <h1>Wanna know how to watch your favorite movie?</h1>
-            <p>Check it out right now!</p>
-            <br>
-            <br>
-            <div class="form-group input-lg">
-              <div class="input-group">
-                <input type="text" class="form-control input-lg" placeholder="Type the movie name">
-                <span class="input-group-btn">
-                  <a class="btn btn-default btn-lg" type="submit">Search</a>
+  </div>
+  <div class="cover">
+    <div class="cover-image"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1>Wanna know how to watch your favorite movie?</h1>
+          <p>Check it out right now!</p>
+          <br>
+          <br>
+          <div class="form-group input-lg">
+            <div class="input-group">
+              <input type="text" class="form-control input-lg" placeholder="Type the movie name" id="input">
+              <span class="input-group-btn">
+                  <a class="btn btn-default btn-lg" type="submit" id="searchButton">Search</a>
                 </span>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
+  </div>
+</body>
 
-</body></html>
+</html>
