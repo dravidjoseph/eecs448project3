@@ -11,9 +11,11 @@
   $(document).ready(function() {
     $("#searchButton").click(function() {
       var inputFromSearch = document.getElementById('input').value;
-      //if (inputFromSearch == 'starwars'){          
-      window.open("movie.html", "_self");
-      //};
+      if (inputFromSearch == 'starwars') {
+        window.open("movie.html", "_self");
+      } else if (inputFromSearch == 'zootopia') {
+        window.open("movie_1.html", "_self");
+      };
     });
   });
   </script>
