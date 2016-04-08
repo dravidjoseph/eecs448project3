@@ -1,4 +1,7 @@
 <?php
+
+//TODO Add dynamic functions to generate a new page dynamically
+
 echo '<html><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,7 +73,5 @@ echo '<html><head>
         </div>
       </div>
     </div>
-  
-
 </body></html>';
 ?>
