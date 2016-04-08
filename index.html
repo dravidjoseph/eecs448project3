@@ -11,6 +11,8 @@
   $(document).ready(function() {
     $("#searchButton").click(function() {
       var inputFromSearch = document.getElementById('input').value;
+      inputFromSearch = inputFromSearch.replace(/ /g, '');
+      inputFromSearch = inputFromSearch.toLowerCase();
       if (inputFromSearch == 'starwars') {
         window.open("movie.html", "_self");
       } else if (inputFromSearch == 'zootopia') {
