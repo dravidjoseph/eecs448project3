@@ -18,6 +18,14 @@ In order to get familiar with the Guidebox API, we will need to use the temp key
 
 Ensure that once the production key is obtained the API is connected to the backend.  This will take the most time out of all of tasks for Project 4, a week or more.
 
+##User login
+
+Allow the user to set up an account with us, which we can either store or use Facebook/Google authentication.  3 days or so, but this will allow us to add a lot of features
+
+##Recommendations
+
+This will take two weeks but can be done concurrently with a lot of other activity.  Using the Guidebox API and some custom algorithm, implement a recommendation system.
+
 ##Front-end Cleanup
 
 Now that the API is linked properly, clean up front-end in a way that is friendly to the user.
