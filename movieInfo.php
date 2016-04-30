@@ -1,6 +1,7 @@
 <?php
+$ID = $_POST["movieID"];
 
-$infoUrl = "info.json";
+$infoUrl = "http://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVpkuNj/movie/".$ID."/";
 $infoResponse = file_get_contents($infoUrl);
 $infoObj = json_decode($infoResponse, true);
 
@@ -36,7 +37,7 @@ echo '<html><head>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <img src="http://static-api.guidebox.com/060515/thumbnails_movies_medium/133474-8257560716-2693021209-7103600800-medium-240x342-alt-.jpg" class="center-block img-responsive">
+            <img src="',$infoObj[poster_240x342],'" class="center-block img-responsive">
             <h1>',$infoObj[title],'</h1>
             <p></p>
             <p>Lucasfilm and visionary director J.J. Abrams join forces to take you back
