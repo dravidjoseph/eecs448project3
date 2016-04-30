@@ -1,0 +1,581 @@
+{"id":133474
+,
+"title":"Star Wars: The Force Awakens"
+,
+"release_year":2015
+,
+"themoviedb":140607
+,
+"original_title":"Star Wars: The Force Awakens"
+,
+"alternate_titles":["Star Wars: The Force Awakens - Pre-Order"
+,
+"Star Wars: The Force Awakens (Plus Bonus Features)"
+,
+"Star Wars: Episode VII - The Force Awakens"
+,
+"Star Wars 7"
+,
+"Star Wars: Episode VII"
+,
+"Star Wars - Episode 7 - The Force Awakens"
+,
+"Star Wars: The Force Awakens (Includes Bonus Features)"
+,
+"Star Wars: The Force Awakens (Theatrical)"
+,
+"Star Wars: The Force Awakens + Bonus"]
+,
+"imdb":"tt2488496"
+,
+"pre_order":false
+,
+"in_theaters":false
+,
+"release_date":"2015-12-15"
+,
+"rating":"PG-13"
+,
+"rottentomatoes":771321699
+,
+"freebase":"\/m\/0nb2r_p"
+,
+"wikipedia_id":14723194
+,
+"metacritic":"http:\/\/www.metacritic.com\/movie\/star-wars-episode-vii---the-force-awakens"
+,
+"common_sense_media":"https:\/\/www.commonsensemedia.org\/movie-reviews\/star-wars-episode-vii-the-force-awakens"
+,
+"overview":"Lucasfilm and visionary director J.J. Abrams join forces to take you back again to a galaxy far, far away as Star Wars returns with Star Wars: The Force Awakens."
+,
+"poster_120x171":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_movies_small\/133474-3616180844-2501566191-2984454511-small-120x171-alt-.jpg"
+,
+"poster_240x342":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_movies_medium\/133474-8257560716-2693021209-7103600800-medium-240x342-alt-.jpg"
+,
+"poster_400x570":"http:\/\/static-api.guidebox.com\/060515\/thumbnails_movies\/-alt--133474-5717065195-7960648816-177957854-large-400x570-alt-.jpg"
+,
+"social":{"facebook":{"facebook_id":169299103121699
+,
+"link":"https:\/\/www.facebook.com\/StarWars"}}
+,
+"genres":[{"id":1
+,
+"title":"Action"},{"id":3
+,
+"title":"Adventure"},{"id":11
+,
+"title":"Fantasy"}]
+,
+"tags":[{"id":2213
+,
+"tag":"outer space"},{"id":354348
+,
+"tag":"good vs evil"},{"id":1139
+,
+"tag":"space opera"},{"id":2186
+,
+"tag":"star wars"},{"id":1724
+,
+"tag":"sequel"}]
+,
+"duration":8160
+,
+"trailers":{"web":[{"type":"Main Trailer"
+,
+"source":"guidebox"
+,
+"display_name":"Guidebox"
+,
+"link":"http:\/\/www.guidebox.com\/watch-now.php?video=53473"
+,
+"embed":"http:\/\/api-widget.guidebox.com\/embed.php?video=53473"}]
+,
+"ios":[{"type":"Main Trailer"
+,
+"source":"guidebox"
+,
+"display_name":"Guidebox"
+,
+"link":"http:\/\/www.guidebox.com\/watch-now.php?video=53473"
+,
+"embed":"http:\/\/api-widget.guidebox.com\/embed.php?video=53473"}]
+,
+"android":[{"type":"Main Trailer"
+,
+"source":"guidebox"
+,
+"display_name":"Guidebox"
+,
+"link":"http:\/\/www.guidebox.com\/watch-now.php?video=53473"
+,
+"embed":"http:\/\/api-widget.guidebox.com\/embed.php?video=53473"}]}
+,
+"writers":[{"id":229004
+,
+"name":"Lawrence Kasdan"},{"id":540693
+,
+"name":"J.J. Abrams"},{"id":513430
+,
+"name":"Michael Arndt"}]
+,
+"directors":[{"id":540693
+,
+"name":"J.J. Abrams"}]
+,
+"cast":[{"id":212668
+,
+"name":"Harrison Ford"
+,
+"character_name":"Han Solo"},{"id":300791
+,
+"name":"Mark Hamill"
+,
+"character_name":"Luke Skywalker"},{"id":577359
+,
+"name":"Carrie Fisher"
+,
+"character_name":"Princess Leia"},{"id":125289
+,
+"name":"Adam Driver"
+,
+"character_name":"Kylo Ren"},{"id":601232
+,
+"name":"Oscar Isaac"
+,
+"character_name":"Poe Dameron"},{"id":491391
+,
+"name":"Anthony Daniels"
+,
+"character_name":"C-3PO"},{"id":153815
+,
+"name":"Kenny Baker"
+,
+"character_name":"R2D2"},{"id":274194
+,
+"name":"Peter Mayhew"
+,
+"character_name":"Chewbacca"},{"id":466592
+,
+"name":"Domhnall Gleeson"
+,
+"character_name":"General Hux"},{"id":286425
+,
+"name":"Lupita Nyong'o"
+,
+"character_name":"Maz Kanata"},{"id":371243
+,
+"name":"Andy Serkis"
+,
+"character_name":"Supreme Leader Snoke"},{"id":79328
+,
+"name":"Max von Sydow"
+,
+"character_name":"Lor San Tekka"},{"id":69834
+,
+"name":"Gwendoline Christie"
+,
+"character_name":"Captain Phasma"},{"id":273939
+,
+"name":"Warwick Davis"
+,
+"character_name":"Wollivan"},{"id":143904
+,
+"name":"Greg Grunberg"
+,
+"character_name":"Snap Wexley"},{"id":723902
+,
+"name":"Maisie Richardson-Sellers"
+,
+"character_name":"Korr Sella"},{"id":723903
+,
+"name":"Miltos Yerolemou"
+,
+"character_name":"Bar Patron"},{"id":723904
+,
+"name":"Pip Andersen"
+,
+"character_name":"Lead Stormtrooper"},{"id":723905
+,
+"name":"Dixie Arnold"
+,
+"character_name":"Resistance Soldier"},{"id":347362
+,
+"name":"Jessica Henwick"
+,
+"character_name":"Jess Testor"},{"id":723907
+,
+"name":"Billie Catherine Lourd"
+,
+"character_name":"Lieutenant Connix"},{"id":315700
+,
+"name":"Iko Uwais"
+,
+"character_name":"Razoo Quin-Fee"},{"id":498229
+,
+"name":"Yayan Ruhian"
+,
+"character_name":"Tasu Leech"},{"id":695964
+,
+"name":"Crystal Clarke"
+,
+"character_name":"Ensign Goode"},{"id":695077
+,
+"name":"Leanne Best"
+,
+"character_name":"Min Sakul"},{"id":55943
+,
+"name":"Ken Leung"
+,
+"character_name":"Admiral Statura"},{"id":79964
+,
+"name":"Anna Brewster"
+,
+"character_name":"Bazine Netal"},{"id":317832
+,
+"name":"John Boyega"
+,
+"character_name":""},{"id":577649
+,
+"name":"Harriet Walter"
+,
+"character_name":"Dr. Kalonia"},{"id":287807
+,
+"name":"Simon Pegg"
+,
+"character_name":""},{"id":458780
+,
+"name":"Daniel Craig"
+,
+"character_name":"Mind-controlled Storm Trooper"},{"id":427504
+,
+"name":"Arnold Schwarzenegger"
+,
+"character_name":"Arnold"},{"id":137008
+,
+"name":"Daisy Ridley"
+,
+"character_name":"Rey"},{"id":622064
+,
+"name":"Ewan McGregor"
+,
+"character_name":"Obi-Wan Kenobi (voice cameo)"},{"id":173161
+,
+"name":"Frank Oz"
+,
+"character_name":"Yoda (voice cameo)"},{"id":532256
+,
+"name":"Alec Guinness"
+,
+"character_name":"Obi-Wan Kenobi (voice cameo)"},{"id":27674
+,
+"name":"Bill Hader"
+,
+"character_name":"BB-8 Voice Consultant"},{"id":277960
+,
+"name":"Ben Schwartz"
+,
+"character_name":"BB-8 Voice Consultant"},{"id":770730
+,
+"name":"Brian Vernel"
+,
+"character_name":"Bala-Tik"}]
+,
+"free_web_sources":[]
+,
+"free_ios_sources":[]
+,
+"free_android_sources":[]
+,
+"tv_everywhere_web_sources":[]
+,
+"tv_everywhere_ios_sources":[]
+,
+"tv_everywhere_android_sources":[]
+,
+"subscription_web_sources":[]
+,
+"subscription_ios_sources":[]
+,
+"subscription_android_sources":[]
+,
+"purchase_web_sources":[{"source":"itunes"
+,
+"display_name":"iTunes"
+,
+"link":"https:\/\/itunes.apple.com\/us\/movie\/star-wars-the-force-awakens\/id1063466898?uo=4&at=10laHb"
+,
+"formats":[{"price":"14.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]},{"source":"amazon_buy"
+,
+"display_name":"Amazon"
+,
+"link":"http:\/\/www.amazon.com\/gp\/product\/B019G7X8DS"
+,
+"formats":[{"price":"14.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]},{"source":"vudu"
+,
+"display_name":"VUDU"
+,
+"link":"http:\/\/click.linksynergy.com\/fs-bin\/click?id=Pz66xbzAbFo&subid=&offerid=251672.1&type=10&tmpid=9417&RD_PARM1=http%3A%2F%2Fwww.vudu.com%2Fmovies%2F%23%21content%2F659626%2FStar-Wars-The-Force-Awakens"
+,
+"formats":[{"price":"14.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HDX"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]},{"source":"google_play"
+,
+"display_name":"Google Play"
+,
+"link":"https:\/\/play.google.com\/store\/movies\/details?id=-eYxeRJCYMY"
+,
+"formats":[{"price":"14.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]},{"source":"mgo"
+,
+"display_name":"FandangoNOW"
+,
+"link":"https:\/\/www.mgo.com\/details\/MMV483CF9EC6C8AADE3703CA236599AF02E0"
+,
+"formats":[{"price":"15.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]},{"source":"youtube_purchase"
+,
+"display_name":"YouTube"
+,
+"link":"https:\/\/www.youtube.com\/watch?v=-eYxeRJCYMY"
+,
+"formats":[{"price":"14.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]},{"source":"xbox"
+,
+"display_name":"Xbox"
+,
+"link":"https:\/\/video.xbox.com\/movie\/255f9a09-0100-11db-89ca-0019b92a3933"
+,
+"formats":[{"price":"14.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]},{"source":"sony"
+,
+"display_name":"Sony Entertainment Network"
+,
+"link":"https:\/\/store.sonyentertainmentnetwork.com\/#!\/en-us\/movies\/cid=UV0008-NPVB19263_CN-0000000000298438"
+,
+"formats":[{"price":"14.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]},{"source":"disney_movies_anywhere"
+,
+"display_name":"Disney Movies Anywhere"
+,
+"link":"http:\/\/www.disneymoviesanywhere.com\/movie\/star-wars-the-force-awakens"
+,
+"formats":[]}]
+,
+"purchase_ios_sources":[{"source":"itunes"
+,
+"display_name":"iTunes"
+,
+"link":"itms:\/\/itunes.apple.com\/us\/movie\/star-wars-the-force-awakens\/id1063466898?uo=4&at=10laHb"
+,
+"app_name":"iTunes"
+,
+"app_link":1
+,
+"app_required":1
+,
+"app_download_link":"itms-apps:\/\/"
+,
+"formats":[{"price":"14.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]},{"source":"vudu"
+,
+"display_name":"VUDU"
+,
+"link":"http:\/\/click.linksynergy.com\/fs-bin\/click?id=Pz66xbzAbFo&subid=&offerid=251672.1&type=10&tmpid=9417&RD_PARM1=http%3A%2F%2Fwww.vudu.com%2Fmovies%2F%23%21content%2F659626%2FStar-Wars-The-Force-Awakens"
+,
+"app_name":"VUDU"
+,
+"app_link":0
+,
+"app_required":0
+,
+"app_download_link":"itms-apps:\/\/itunes.apple.com\/app\/vudu-player-movies-tv\/id487285735"
+,
+"formats":[{"price":"14.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HDX"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]}]
+,
+"purchase_android_sources":[{"source":"vudu"
+,
+"display_name":"VUDU"
+,
+"link":"vuduandroidapp:\/\/_type\/deeplink\/token\/?refid=&refcontentid=659626#!content%2F659626"
+,
+"app_name":"VUDU"
+,
+"app_link":1
+,
+"app_required":1
+,
+"app_download_link":"https:\/\/play.google.com\/store\/apps\/details?id=air.com.vudu.air.DownloaderTablet"
+,
+"formats":[{"price":"14.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HDX"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]},{"source":"google_play"
+,
+"display_name":"Google Play"
+,
+"link":"https:\/\/play.google.com\/store\/movies\/details?id=-eYxeRJCYMY"
+,
+"app_name":"Google Play"
+,
+"app_link":0
+,
+"app_required":0
+,
+"app_download_link":"https:\/\/play.google.com\/store"
+,
+"formats":[{"price":"14.99"
+,
+"format":"SD"
+,
+"type":"purchase"
+,
+"pre_order":false},{"price":"19.99"
+,
+"format":"HD"
+,
+"type":"purchase"
+,
+"pre_order":false}]}]
+,
+"other_sources":[]
+,
+"development_api_key":"You are currently using a temporary development API key. This API key is for testing only. You have used 45 of 500 available calls. Please see the API docs (http:\/\/api.guidebox.com\/apidocs) for additional information or to generate a production API key."}

@@ -1,23 +1,25 @@
 <?php
 // Base API URL : http://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVpkuNj/
 
- $searchInput = $_POST["input"];
- $encodedInput = urlencode($searchInput);
+//$searchInput = urlencode($_POST["input"]);
 
-$jsonurl = "https://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVpkuNj/search/movie/title/$encodedInput/fuzzy";
-$response = file_get_contents($jsonurl);
-$jsonobj  = json_decode($response, true);
-var_dump($jsonobj);
+// $searchUrl = "https://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVpkuNj/search/movie/title/$searchInput/fuzzy";
+$searchUrl = "search.json";
+$searchResponse = file_get_contents($searchUrl);
+$searchObj = json_decode($searchResponse, true);
+
+ echo '<html><head>
+      </head><body>';
 $i = 0;
-while ($jsonobj[results][$i][id] != null) {
-	$id = $jsonobj[results][$i][id];
-	echo $id."<br>";
+while (isset($searchObj[results][$i][title])) {
+	echo '<a href= "movieInfo.php">',$searchObj[results][$i][title],'<br></a>';
 	$i++;
 }
-	
+
+echo '</body></html>';
 
 
-//$jsonobj  = json_decode($response);
-//$id =  $jsonobj->results[0]->id;
+// $jsonobj  = json_decode($response);
+// $id =  $jsonobj->results[0]->id;
 
  ?>
