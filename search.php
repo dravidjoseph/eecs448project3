@@ -14,6 +14,7 @@ $searchShowObj = json_decode($searchShowResponse, true);
 
  echo '<html><head>
       </head><body>';
+      echo '*****MOVIES*****';
 $i = 0; 
    
 while (isset($searchObj[results][$i][title])) {	
@@ -23,6 +24,7 @@ while (isset($searchObj[results][$i][title])) {
     </form>';
 	$i++;
 }
+echo '*****SHOWS*****';
 while (isset($searchShowObj[results][$i][title])) {	
 	echo '<form action="showInfo.php" method="post" target="_blank">
         ',$searchShowObj[results][$i][title],'<input type="text" hidden value="',$searchShowObj[results][$i][id],'" name="movieID" ><br>

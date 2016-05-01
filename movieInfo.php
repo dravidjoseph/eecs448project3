@@ -37,7 +37,13 @@ echo '<html><head>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <img src="',$infoObj[poster_240x342],'" class="center-block img-responsive">
+            <img src="';
+            if ($infoObj[poster_240x342] == "http://static-api.guidebox.com/misc/default_movie_240x342.jpg") {
+              echo 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png';
+            }else{
+              echo $infoObj[poster_240x342];
+            }
+            echo '" class="center-block img-responsive">
             <h1>',$infoObj[title],'</h1>
             <p></p>
             <p>',$infoObj[overview],'</p>
