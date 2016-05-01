@@ -40,7 +40,7 @@ echo '<html><head>
             <img src="',$infoObj[poster_240x342],'" class="center-block img-responsive">
             <h1>',$infoObj[title],'</h1>
             <p></p>
-            <p>XXXXXXXXXXXXXXXXXXXXXX</p>
+            <p>',$infoObj[overview],'</p>
             <p></p>
           </div>
           <div class="col-md-8">
@@ -52,13 +52,13 @@ while (isset($infoObj[purchase_web_sources][$i])) {
   echo '<li class="media">
                 <a href="',$infoObj[purchase_web_sources][$i][link],'" class="pull-left" target="_blank"><i class="fa fa-3x fa-fw fa-play-circle"></i></a>
                 <div class="media-body">
-                  <h4 class="media-heading">',$infoObj[purchase_web_sources][$i][display_name],'</h4>';
+                  <h4 class="media-heading">',$infoObj[purchase_web_sources][$i][display_name],'</h4><p>';
                   $j = 0;
                  while (isset($infoObj[purchase_web_sources][$i][formats][$j])) {                 
-                 echo' <p>',$infoObj[purchase_web_sources][$i][formats][$j][type],' : ',$infoObj[purchase_web_sources][$i][formats][$j][price],' (',$infoObj[purchase_web_sources][$i][formats][$j][format],')</p>';
+                 echo $infoObj[purchase_web_sources][$i][formats][$j][type],' : ',$infoObj[purchase_web_sources][$i][formats][$j][price],' (',$infoObj[purchase_web_sources][$i][formats][$j][format],')  ';
                  $j++;
                 }
-                  echo'
+                  echo'</p>
                 </div>
               </li>';
               $i++;
