@@ -40,37 +40,30 @@ echo '<html><head>
             <img src="',$infoObj[poster_240x342],'" class="center-block img-responsive">
             <h1>',$infoObj[title],'</h1>
             <p></p>
-            <p>Lucasfilm and visionary director J.J. Abrams join forces to take you back
-              again to a galaxy far, far away as Star Wars returns with Star Wars: The
-              Force Awakens.</p>
+            <p>XXXXXXXXXXXXXXXXXXXXXX</p>
             <p></p>
           </div>
           <div class="col-md-8">
             <h1>How can you watch?</h1>
             <p></p>
-            <ul class="media-list">
-              <li class="media">
-                <a href="https://itunes.apple.com/us/movie/star-wars-the-force-awakens/id1063466898?uo=4&amp;at=10laHb" class="pull-left" target="_blank"><i class="fa fa-3x fa-fw fa-play-circle"></i></a>
+            <ul class="media-list">';
+            $i = 0;
+while (isset($infoObj[purchase_web_sources][$i])) {
+  echo '<li class="media">
+                <a href="',$infoObj[purchase_web_sources][$i][link],'" class="pull-left" target="_blank"><i class="fa fa-3x fa-fw fa-play-circle"></i></a>
                 <div class="media-body">
-                  <h4 class="media-heading">iTunes</h4>
-                  <p>Purchase: 14.99 (SD) 19.99 (HD)</p>
+                  <h4 class="media-heading">',$infoObj[purchase_web_sources][$i][display_name],'</h4>';
+                  $j = 0;
+                 while (isset($infoObj[purchase_web_sources][$i][formats][$j])) {                 
+                 echo' <p>',$infoObj[purchase_web_sources][$i][formats][$j][type],' : ',$infoObj[purchase_web_sources][$i][formats][$j][price],' (',$infoObj[purchase_web_sources][$i][formats][$j][format],')</p>';
+                 $j++;
+                }
+                  echo'
                 </div>
-              </li>
-              <li class="media">
-                <a href="http://www.amazon.com/gp/product/B019G7X8DS" class="pull-left" target="_blank"><i class="fa fa-3x fa-fw fa-play-circle"></i></a>
-                <div class="media-body">
-                  <h4 class="media-heading">Amazon</h4>
-                  <p>Purchase: 14.99 (SD) 19.99 (HD)</p>
-                </div>
-              </li>
-              <li class="media">
-                <a href="http://click.linksynergy.com/fs-bin/click?id=Pz66xbzAbFo&amp;subid=&amp;offerid=251672.1&amp;type=10&amp;tmpid=9417&amp;RD_PARM1=http%3A%2F%2Fwww.vudu.com%2Fmovies%2F%23%21content%2F659626%2FStar-Wars-The-Force-Awakens" class="pull-left" target="_blank"><i class="fa fa-3x fa-fw fa-play-circle"></i></a>
-                <div class="media-body">
-                  <h4 class="media-heading">VUDU</h4>
-                  <p>Purchase: 14.99 (SD) 19.99 (HD)</p>
-                </div>
-              </li>
-            </ul>
+              </li>';
+              $i++;
+            }
+              echo '</ul>
             <p></p>
           </div>
         </div>
