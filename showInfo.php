@@ -38,10 +38,10 @@ echo '<html><head>
         <div class="row">
           <div class="col-md-4">
             <img src="';
-            if ($infoObj[poster_240x342] == "http://static-api.guidebox.com/misc/default_movie_240x342.jpg") {
+            if ($infoObj[poster] == "http://static-api.guidebox.com/misc/default_movie_240x342.jpg") {
               echo 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png';
             }else{
-              echo $infoObj[poster_240x342];
+              echo $infoObj[poster];
             }
             echo '" class="center-block img-responsive">
             <h1>',$infoObj[title],'</h1>
@@ -56,7 +56,8 @@ echo '<html><head>
             echo '<li class="media">
                 <a href="',$infoObj[url],'" class="pull-left" target="_blank"><i class="fa fa-3x fa-fw fa-play-circle"></i></a>
                 <div class="media-body">
-                  <h4 class="media-heading">Guidebox</h4><p>';      
+                  <h4 class="media-heading">Guidebox</h4>
+                  <p><-- Visit website for more details</p>';      
               echo '</ul>
             <p></p>
           </div>
