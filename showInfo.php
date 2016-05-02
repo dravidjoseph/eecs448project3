@@ -38,7 +38,7 @@ echo '<html><head>
         <div class="row">
           <div class="col-md-4">
             <img src="';
-            if ($infoObj[poster] == "http://static-api.guidebox.com/misc/default_movie_240x342.jpg") {
+            if ($infoObj[poster] == "http://static-api.guidebox.com/misc/default_movie_400x570.jpg") {
               echo 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png';
             }else{
               echo $infoObj[poster];

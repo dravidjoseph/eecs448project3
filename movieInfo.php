@@ -38,7 +38,7 @@ echo '<html><head>
         <div class="row">
           <div class="col-md-4">
             <img src="';
-            if ($infoObj[poster_400x570] == "http://static-api.guidebox.com/misc/default_movie_240x342.jpg") {
+            if ($infoObj[poster_400x570] == "http://static-api.guidebox.com/misc/default_movie_400x57.jpg") {
               echo 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png';
             }else{
               echo $infoObj[poster_400x570];
@@ -48,7 +48,7 @@ echo '<html><head>
             
             <a href="',$infoObj[trailers][web][0][embed],'" target="_blank"><img src="http://www.mygc.com.au/wp-content/uploads/2014/10/watch-trailer-button.png" class="center-block" /></a>
             <p>Length : ',gmdate("H:i:s",$infoObj[duration]),'</p>
-            <p>',$infoObj[overview],'</p>
+            <p>',$infoObj[overview],'</p
             <p></p>
           </div>
           <div class="col-md-8">
