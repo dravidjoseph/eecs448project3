@@ -1,3 +1,4 @@
+<?php include 'movielist.php'; ?>
 <html>
 
 <head>
@@ -7,6 +8,11 @@
   <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+  <style>
+  table, tr, td {
+    border: 1px solid black;
+  }
+  </style>
 </head>
 
 <body>
@@ -31,7 +37,11 @@
     </div>
   </div>
   <div class="cover">
-    <div class="cover-image"></div>
+    <div class="cover-image">
+      <table align="center">
+        <?php tableMovies(); ?>
+      </table>
+    </div>
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
@@ -41,8 +51,8 @@
           <br>
           <div class="form-group input-lg" align="center">
             <div class="input-group">
-              <form class="input-group" action="search.php" method="post" >
-              <input type="text" class="form-control input-lg" placeholder="Type the movie name" name = "input">
+              <form class="input-group" action="search.php" method="post">
+                <input type="text" class="form-control input-lg" placeholder="Type the movie name" name="input">
                 <span class="input-group-btn">
                   <input class="btn btn-default btn-lg" type="submit" value = "Search"></input>
                 </span>
@@ -50,6 +60,13 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="">
+        <table align="center">
+          <tr>
+            <?php tableShows(); ?>
+          </tr>
+        </table>
       </div>
     </div>
   </div>

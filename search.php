@@ -14,34 +14,34 @@ $searchShowObj      = json_decode($searchShowResponse, true);
 function printMovies($searchObj)
 {
     if (empty($searchObj[results])) {
-        echo 'No search results for "',$_POST["input"],'"';
-    }
-        else{
-            $i = 0;
-            while (isset($searchObj[results][$i][title])){
-                echo '<form action="movieInfo.php" method="post" target="_blank">
-                <img src = "',$searchObj[results][$i][poster_240x342],'" /><br>
+        echo 'No search results for "', $_POST["input"], '"';
+    } else {
+        $i = 0;
+        while (isset($searchObj[results][$i][title])) {
+            echo '<form action="movieInfo.php" method="post" target="_blank">
+                <img src = "', $searchObj[results][$i][poster_240x342], '" /><br>
                 ', $searchObj[results][$i][title], ' (', $searchObj[results][$i][release_year], ')<input type="text" hidden value="', $searchObj[results][$i][id], '" name="movieID" ><br>
             <input type="submit" value = "More Information">
         </form>';
-        $i++;
-    }
+            $i++;
+        }
     }
 }
 
 function printShows($searchShowObj)
 {
     if (empty($searchShowObj[results])) {
-        echo 'No search results for "',$_POST["input"],'"';
-    }
-    $i = 0;
-    while (isset($searchShowObj[results][$i][title])) {
-        echo '<form action="showInfo.php" method="post" target="_blank">
-        <img src = "',$searchShowObj[results][$i][artwork_208x117],'" /><br>
+        echo 'No search results for "', $_POST["input"], '"';
+    } else {        
+        $i = 0;
+        while (isset($searchShowObj[results][$i][title])) {
+            echo '<form action="showInfo.php" method="post" target="_blank">
+        <img src = "', $searchShowObj[results][$i][artwork_208x117], '" /><br>
         ', $searchShowObj[results][$i][title], ' (', $searchShowObj[results][$i][first_aired], ')<input type="text" hidden value="', $searchShowObj[results][$i][id], '" name="movieID" ><br>
         <input type="submit" value = "More Information">
     </form>';
-        $i++;
+            $i++;
+        }
     }
 }
 
