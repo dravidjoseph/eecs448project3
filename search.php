@@ -50,6 +50,6 @@ echo '<html><head>
 echo '<h1>*****MOVIES*****</h1>';
 printMovies($searchObj);
 echo '<h1>*****SHOWS*****</h1>';
-printShows($searchShowObj)
+printShows($searchShowObj);
 echo '</body></html>';
 ?>
