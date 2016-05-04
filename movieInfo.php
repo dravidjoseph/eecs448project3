@@ -1,5 +1,9 @@
 <?php
 $ID = $_POST["movieID"];
+if (intval($_GET["something"]) != 0) {
+  $ID = intval($_GET["something"]);
+}
+
 
 $infoUrl = "http://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVpkuNj/movie/".$ID."/";
 $infoResponse = file_get_contents($infoUrl);
