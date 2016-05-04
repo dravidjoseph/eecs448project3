@@ -1,7 +1,7 @@
 <?php
 $ID = $_POST["movieID"];
-if (intval($_GET["something"]) != 0) {
-  $ID = intval($_GET["something"]);
+if (intval($_GET["id"]) != 0) {
+  $ID = intval($_GET["id"]);
 }
 
 

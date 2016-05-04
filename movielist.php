@@ -8,7 +8,7 @@ function tableMovies()
     $numMovies = 6;
     echo '<tr>';
     for ($i = 0; $i < $numMovies; $i++) {
-        echo '<td><a href="movieInfo.php? something= ',$movieListObj[results][$i][id],' " ><img src = "', $movieListObj[results][$i][poster_240x342],'" class = "posters"/></a></td>';
+        echo '<td><a href="movieInfo.php? id= ',$movieListObj[results][$i][id],' " ><img src = "', $movieListObj[results][$i][poster_240x342],'" class = "posters"/></a></td>';
     }
     echo '</tr>';
     echo '<tr>';
@@ -26,7 +26,7 @@ function tableShows()
     $numShows = 6;
     echo '<tr>';
     for ($i = 0; $i < $numShows; $i++) {
-        echo '<td><a href = "http://www.google.com"><img src = "', $showListObj[results][$i][artwork_208x117], '" class = "posters" /></a></td>';
+        echo '<td><a href="showInfo.php? id= ',$showListObj[results][$i][id],' " ><img src = "', $showListObj[results][$i][artwork_208x117], '" class = "posters" /></a></td>';
     }
     echo '</tr>';
     echo '<tr>';
