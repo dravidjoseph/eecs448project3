@@ -7,39 +7,9 @@ return [
     'table' => 'oauth_identities',
     'providers' => [
         'facebook' => [
-            'client_id' => '12345678',
-            'client_secret' => 'y0ur53cr374ppk3y',
-            'redirect_uri' => 'https://example.com/your/facebook/redirect',
-            'scope' => [],
-        ],
-        'google' => [
-            'client_id' => '12345678',
-            'client_secret' => 'y0ur53cr374ppk3y',
-            'redirect_uri' => 'https://example.com/your/google/redirect',
-            'scope' => [],
-        ],
-        'github' => [
-            'client_id' => '12345678',
-            'client_secret' => 'y0ur53cr374ppk3y',
-            'redirect_uri' => 'https://example.com/your/github/redirect',
-            'scope' => [],
-        ],
-        'linkedin' => [
-            'client_id' => '12345678',
-            'client_secret' => 'y0ur53cr374ppk3y',
-            'redirect_uri' => 'https://example.com/your/linkedin/redirect',
-            'scope' => [],
-        ],
-        'instagram' => [
-            'client_id' => '12345678',
-            'client_secret' => 'y0ur53cr374ppk3y',
-            'redirect_uri' => 'https://example.com/your/instagram/redirect',
-            'scope' => [],
-        ],
-        'soundcloud' => [
-            'client_id' => '12345678',
-            'client_secret' => 'y0ur53cr374ppk3y',
-            'redirect_uri' => 'https://example.com/your/soundcloud/redirect',
+            'client_id' => '1118003061584649',
+            'client_secret' => '721d57e9fa83afe680217871115a9e8d',
+            'redirect_uri' => 'https://people.eecs.ku.edu/~jpark83/project4/facebook/authorize',
             'scope' => [],
         ],
     ],

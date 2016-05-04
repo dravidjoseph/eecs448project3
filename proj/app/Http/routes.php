@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('facebook/authorize', function() {
+    return SocialAuth::authorize('facebook');
+});
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
