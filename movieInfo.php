@@ -48,9 +48,9 @@ echo '<html><head>
               echo $infoObj[poster_400x570];
             }
             echo '" class="center-block img-responsive">
-            <h1>',$infoObj[title],' (',$infoObj[release_year],')</h1>
+            <h1 align = "center">',$infoObj[title],' (',$infoObj[release_year],')</h1>
             
-            <a href="',$infoObj[trailers][web][0][embed],'" target="_blank"><img src="http://www.mygc.com.au/wp-content/uploads/2014/10/watch-trailer-button.png" class="center-block" /></a>
+            <a href="',$infoObj[trailers][web][0][embed],'" target="_blank"><img src="watch-trailer-button.png" class="center-block" /></a>
             <p>Length : ',gmdate("H:i:s",$infoObj[duration]),'</p>
             <p>',$infoObj[overview],'</p
             <p></p>
