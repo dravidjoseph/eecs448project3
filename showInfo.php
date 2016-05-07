@@ -8,21 +8,19 @@ $infoUrl = "http://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVp
 $infoResponse = file_get_contents($infoUrl);
 $infoObj = json_decode($infoResponse, true);
 
-$listEpisodesUrl = "https://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVpkuNj/show/".$ID."/episodes/all/0/100/all/web";
+$startNum = 0;
+$listEpisodesUrl = "https://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVpkuNj/show/".$ID."/episodes/all/".$startNum."/100/all/web";
 $listEpisodesResponse = file_get_contents($listEpisodesUrl);
 $listEpisodesObj = json_decode($listEpisodesResponse, true);
 
 
-function listAllEpisodes($listEpisodesObj)
+function listAllEpisodes($jsonObj)
 {
   $i = 0;
-  while (isset($listEpisodesObj[results][$i][title])) {
-    echo '<a href = "episodeInfo.php" id = "',$listEpisodesObj[results][$i][id],'"> Title : ', $listEpisodesObj[results][$i][id],'</a></br>';
+  while (isset($jsonObj[results][$i][title])) {
+    echo '<a href = "episodeInfo.php? id=',$jsonObj[results][$i][id],'" name="epiID">
+     Season: ',$jsonObj[results][$i][season_number],' Episode: ',$jsonObj[results][$i][episode_number],' ',$jsonObj[results][$i][title],' (',$jsonObj[results][$i][first_aired],')</a></br>';
     $i ++;
-  }
-  if($listEpisodesObj[total_returned] == 100)
-  {
-
   }
 }
 
@@ -72,7 +70,16 @@ echo '<html><head>
             <p></p>
           </div>
           <div class="col-md-8">';
-          listAllEpisodes($listEpisodesObj);
+          
+
+          while ($listEpisodesObj[total_returned] != 0) {
+            listAllEpisodes($listEpisodesObj);
+            $startNum += 100;
+            $listEpisodesUrl = "https://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVpkuNj/show/".$ID."/episodes/all/".$startNum."/100/all/web";
+            $listEpisodesResponse = file_get_contents($listEpisodesUrl);
+            $listEpisodesObj = json_decode($listEpisodesResponse, true);
+          }
+
           echo '</div>
         </div>
       </div>

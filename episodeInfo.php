@@ -1,12 +1,10 @@
 <?php
-$ID = $_POST["movieID"];
-if (intval($_GET["id"]) != 0) {
-  $ID = intval($_GET["id"]);
-}
 
-$infoUrl = "http://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVpkuNj/show/".$ID."/";
-$infoResponse = file_get_contents($infoUrl);
-$infoObj = json_decode($infoResponse, true);
+$epiID = intval($_GET["id"]);
+
+$episodeInfoUrl      = "https://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVpkuNj/episode/" . $epiID . "/";
+$episodeInfoResponse = file_get_contents($episodeInfoUrl);
+$episodeInfoObj      = json_decode($episodeInfoResponse, true);
 
 
 echo '<html><head>
@@ -42,21 +40,41 @@ echo '<html><head>
         <div class="row">
           <div class="col-md-4">
             <img src="';
-            if ($infoObj[poster] == "http://static-api.guidebox.com/misc/default_movie_400x570.jpg") {
-              echo 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png';
-            }else{
-              echo $infoObj[poster];
-            }
-            echo '" class="center-block img-responsive">
-            <h1>',$infoObj[title],'</h1>
-            <p></p>
-            <p>',$infoObj[overview],'</p>
+echo $episodeInfoObj[thumbnail_608x342];
+echo '" class="center-block img-responsive">
+            <h1>', $episodeInfoObj[title], '</h1>
+            <p>Season ', $episodeInfoObj[season_number], ', Epesode ', $episodeInfoObj[episode_number], '</p>
+            <p>Date: ', $episodeInfoObj[first_aired], '</p>
+            <p>', $episodeInfoObj[overview], '</p>
             <p></p>
           </div>
-          <div class="col-md-8">';
-          
-
-          echo '</div>
+          <div class="col-md-8">
+          <h1>How can you watch?</h1>
+          <p></p>
+          <ul class="media-list">';
+          $i = 0;
+while (isset($episodeInfoObj[purchase_web_sources][$i])) {
+  echo '<li class="media">
+            <a href="', $episodeInfoObj[purchase_web_sources][$i][link], '" class="pull-left" target="_blank"><i class="fa fa-3x fa-fw fa-play-circle"></i></a>
+                <div class="media-body">
+                  <h4 class="media-heading">', $episodeInfoObj[purchase_web_sources][$i][display_name], '</h4><p>';
+  if (empty($episodeInfoObj[purchase_web_sources][$i][formats]) || !isset($episodeInfoObj[purchase_web_sources][$i][formats])) {
+    echo "<-- Visit website for more details";
+  } else {
+    $j = 0;
+    while (isset($episodeInfoObj[purchase_web_sources][$i][formats][$j])) {
+      echo $episodeInfoObj[purchase_web_sources][$i][formats][$j][type], ' : ', $episodeInfoObj[purchase_web_sources][$i][formats][$j][price], ' (', $episodeInfoObj[purchase_web_sources][$i][formats][$j][format], ')  ';
+      $j++;
+    }
+  };
+  echo '</p>
+                </div>
+              </li>';
+  $i++;
+}
+echo '</ul>
+            <p></p>
+          </div>
         </div>
       </div>
     </div>
