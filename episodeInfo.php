@@ -8,24 +8,6 @@ $infoUrl = "http://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVp
 $infoResponse = file_get_contents($infoUrl);
 $infoObj = json_decode($infoResponse, true);
 
-$listEpisodesUrl = "https://api-public.guidebox.com/v1.43/US/rKrgT4qOQA2NmwWX5riPZETUlqVpkuNj/show/".$ID."/episodes/all/0/100/all/web";
-$listEpisodesResponse = file_get_contents($listEpisodesUrl);
-$listEpisodesObj = json_decode($listEpisodesResponse, true);
-
-
-function listAllEpisodes($listEpisodesObj)
-{
-  $i = 0;
-  while (isset($listEpisodesObj[results][$i][title])) {
-    echo '<a href = "episodeInfo.php" id = "',$listEpisodesObj[results][$i][id],'"> Title : ', $listEpisodesObj[results][$i][id],'</a></br>';
-    $i ++;
-  }
-  if($listEpisodesObj[total_returned] == 100)
-  {
-
-  }
-}
-
 
 echo '<html><head>
     <meta charset="utf-8">
@@ -72,7 +54,8 @@ echo '<html><head>
             <p></p>
           </div>
           <div class="col-md-8">';
-          listAllEpisodes($listEpisodesObj);
+          
+
           echo '</div>
         </div>
       </div>
