@@ -33,8 +33,8 @@ Route::get('facebook/login', function() {
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/series', function () {
-    return view('series-search');
+Route::get('/shows', function () {
+    return view('shows-search');
 });
 
 Route::get('facebook/authorize', function() {

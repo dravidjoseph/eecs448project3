@@ -13,15 +13,15 @@
             </div>
         @endif
         <div class="col-md-10 col-md-offset-1 text-center">
-          <h1>Wanna know how to watch your favorite serie?</h1>
+          <h1>Wanna know how to watch your favorite show?</h1>
           <p>Check it out right now!</p>
           <br>
           <br>
           <div class="form-group input-lg" align="center">
             <div class="input-group">
-              <form class="input-group" action="series/search" method="post">
+              <form class="input-group" action="show/search" method="post">
                 {{ csrf_field() }}
-                <input type="text" class="form-control input-lg" placeholder="Type the serie name" name="search">
+                <input type="text" class="form-control input-lg" placeholder="Type the show name" name="search">
                 <span class="input-group-btn">
                   <input class="btn btn-default btn-lg" type="submit" value = "Search"></input>
                 </span>
