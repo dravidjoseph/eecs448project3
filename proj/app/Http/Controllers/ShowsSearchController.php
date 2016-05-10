@@ -22,4 +22,18 @@ class ShowsSearchController extends Controller
     	$shows = $search->searchByTitle(urlencode($request->search));
         return view('shows-results')->with(["shows" => $shows]);
     }
+
+    /**
+     * Show a specific show.
+     *
+     * @param  int 	$id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+    	$search = new Shows;
+    	$show = $search->getById($id);
+    	$seasons = $search->getSeasonEpisodes($id);
+        return view('show')->with(["show" => $show, "seasons" => $seasons]);
+    }
 }

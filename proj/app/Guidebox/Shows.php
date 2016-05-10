@@ -41,6 +41,7 @@ class Shows
     /**
      * Get the show with the specific ID passed.
      *
+     * @param  int  $id
      * @return array
      */
     public function getById($id)
@@ -50,5 +51,40 @@ class Shows
         $searchObj = json_decode($searchResponse, true);
 
         return $searchObj;
+    }
+
+    /**
+     * List the episodes for a specific show.
+     *
+     * @param  int  $id
+     * @return array
+     */
+    public function listEpisodes($id)
+    {
+        $searchUrl = $this->apiUrl.$this->apiKey."/show/".$id."/episodes/all/0/100/all/web/false?reverse_ordering=true";
+        $searchResponse = file_get_contents($searchUrl);
+        $searchObj = json_decode($searchResponse, true);
+
+        return $searchObj["results"];
+    }
+
+    /**
+     * Get the epiodes organized by season.
+     *
+     * @param  int  $id
+     * @return array
+     */
+    public function getSeasonEpisodes($id)
+    {
+        $list = $this->listEpisodes($id);
+        $seasons = array();
+        foreach ($list as $episode) {
+            $seasons[$episode["season_number"]][$episode["episode_number"]] = [
+                "id" => $episode["id"],
+                "number" => $episode["episode_number"],
+                "title" => $episode["title"]
+            ];
+        }
+        return $seasons;
     }
 }

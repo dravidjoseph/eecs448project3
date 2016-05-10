@@ -9,7 +9,7 @@
           <img src="{{$show['artwork_208x117']}}" alt="...">
           <div class="caption text-center">
             <h3>{{$show['title']}}</h3>
-            <p><a href="show/{{$show['id']}}" class="btn btn-primary" role="button">More Information</a></p>
+            <p><a href="/show/{{$show['id']}}" class="btn btn-primary" role="button">More Information</a></p>
           </div>
         </div>
       </div>
