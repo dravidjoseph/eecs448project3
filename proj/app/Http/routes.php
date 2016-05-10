@@ -11,6 +11,25 @@
 |
 */
 
+use SocialNorm\Exceptions\ApplicationRejectedException;
+use SocialNorm\Exceptions\InvalidAuthorizationCodeException;
+
+Route::get('facebook/login', function() {
+    try {
+        SocialAuth::login('facebook');
+    } catch (ApplicationRejectedException $e) {
+        // User rejected application
+    } catch (InvalidAuthorizationCodeException $e) {
+        // Authorization was attempted with invalid
+        // code,likely forgery attempt
+    }
+
+    // Current user is now available via Auth facade
+    $user = Auth::user();
+	//dd($user);
+    return Redirect::intended();
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
