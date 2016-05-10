@@ -368,8 +368,35 @@ class ExampleTest extends TestCase
     }
     **/
     
+    /** Search page testing **/
     
+    public function testSearchMovieTitle()
+    {
+        $this->visit('/')
+             ->type('Star Wars', 'search')
+             ->press('Search')
+             ->seePageIs('/search')
+             ->see('Star Wars');
+    }
     
+    public function testSearchMoreInfoTitle()
+    {
+        $this->visit('/')
+             ->type('Star Wars', 'search')
+             ->press('Search')
+             ->seePageIs('/search')
+             ->see('More Information');
+    }
+    
+    public function testSearchMoreInfoButton()
+    {
+        $this->visit('/')
+             ->type('Star Wars', 'search')
+             ->press('Search')
+             ->seePageIs('/search')
+             ->click('More Information')
+             ->seePageIs('/movie/133474');
+    }
     
     
     
