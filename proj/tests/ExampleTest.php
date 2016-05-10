@@ -375,16 +375,14 @@ class ExampleTest extends TestCase
         $this->visit('/')
              ->type('Star Wars', 'search')
              ->press('Search')
-             ->seePageIs('/search')
              ->see('Star Wars');
     }
     
-    public function testSearchMoreInfoTitle()
+    public function testSearchMoreInfoTitle()   /** Ask about testing for pictures and if there is going to be movie/tv shows titles **/
     {
         $this->visit('/')
              ->type('Star Wars', 'search')
              ->press('Search')
-             ->seePageIs('/search')
              ->see('More Information');
     }
     
@@ -393,11 +391,49 @@ class ExampleTest extends TestCase
         $this->visit('/')
              ->type('Star Wars', 'search')
              ->press('Search')
-             ->seePageIs('/search')
              ->click('More Information')
              ->seePageIs('/movie/133474');
     }
     
+    
+    /** Search results testing **/
+    
+    public function testResultsMovieTitle()
+    {
+        $this->visit('/')
+             ->type('Star Wars', 'search')
+             ->press('Search')
+             ->click('More Information')
+             ->see('Star Wars');
+    }
+    
+    public function testResultsHCYWTitle()   /** Dont know how to test link buttons or about picture for movie **/
+    {
+        $this->visit('/')
+             ->type('Star Wars', 'search')
+             ->press('Search')
+             ->click('More Information')
+             ->see('How can you watch?');
+    }
+    
+    public function testResultsLinkTitle()
+    {
+        $this->visit('/')
+             ->type('Star Wars', 'search')
+             ->press('Search')
+             ->click('More Information')
+             ->see('iTunes');
+    }
+    
+    public function testResultsParagraph()
+    {
+        $this->visit('/')
+             ->type('Star Wars', 'search')
+             ->press('Search')
+             ->click('More Information')
+             ->see('Length')
+             ->see('Lucasfilm');
+    }
     
     
 }
