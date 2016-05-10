@@ -10,7 +10,8 @@
           <br>
           <div class="form-group input-lg" align="center">
             <div class="input-group">
-              <form class="input-group" action="search.php" method="post">
+              <form class="input-group" action="/search" method="post">
+                {{ csrf_field() }}
                 <input type="text" class="form-control input-lg" placeholder="Type the movie name" name="search">
                 <span class="input-group-btn">
                   <input class="btn btn-default btn-lg" type="submit" value = "Search"></input>
