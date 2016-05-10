@@ -15,6 +15,9 @@ class MoviesSearchController extends Controller
      */
     public function search(Request $request)
     {
+    	$this->validate($request, [
+	        'search' => 'required|max:255',
+	    ]);
     	$search = new Movies;
     	$movies = $search->searchByTitle(urlencode($request->search));
         return view('search-results')->with(["movies" => $movies]);
