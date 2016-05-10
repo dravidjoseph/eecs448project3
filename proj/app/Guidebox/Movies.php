@@ -28,7 +28,7 @@ class Movies
      *
      * @return array
      */
-    public function getMovieByTitle($title)
+    public function searchByTitle($title)
     {
         $searchUrl = $this->apiUrl.$this->apiKey."/search/movie/title/".$title."/fuzzy";
         $searchResponse = file_get_contents($searchUrl);

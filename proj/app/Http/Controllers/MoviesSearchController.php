@@ -16,6 +16,7 @@ class MoviesSearchController extends Controller
     public function search(Request $request)
     {
     	$search = new Movies;
-    	dd($search->getMovieByTitle(urlencode($request->search)));
+    	$movies = $search->searchByTitle(urlencode($request->search));
+        return view('search-results')->with(["movies" => $movies]);
     }
 }
