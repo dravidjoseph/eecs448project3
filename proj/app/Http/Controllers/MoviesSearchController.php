@@ -19,4 +19,17 @@ class MoviesSearchController extends Controller
     	$movies = $search->searchByTitle(urlencode($request->search));
         return view('search-results')->with(["movies" => $movies]);
     }
+
+    /**
+     * Show a specific movie.
+     *
+     * @param  int 	$id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+    	$search = new Movies;
+    	$movie = $search->getById($id);
+        return view('movie')->with(["movie" => $movie]);
+    }
 }

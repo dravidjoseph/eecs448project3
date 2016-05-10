@@ -23,3 +23,4 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 Route::post('/search', 'MoviesSearchController@search');
+Route::get('/movie/{id}', 'MoviesSearchController@show');

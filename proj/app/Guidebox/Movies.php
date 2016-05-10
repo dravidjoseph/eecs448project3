@@ -24,8 +24,9 @@ class Movies
     }
 
     /**
-     * Get the services provided by the provider.
+     * Search for movies containing the title passed.
      *
+     * @param  string   $title
      * @return array
      */
     public function searchByTitle($title)
@@ -35,5 +36,19 @@ class Movies
         $searchObj = json_decode($searchResponse, true);
 
         return $searchObj["results"];
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function getById($id)
+    {
+        $searchUrl = $this->apiUrl.$this->apiKey."/movie/".$id."/";
+        $searchResponse = file_get_contents($searchUrl);
+        $searchObj = json_decode($searchResponse, true);
+
+        return $searchObj;
     }
 }
