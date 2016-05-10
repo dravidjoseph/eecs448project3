@@ -169,6 +169,14 @@ class ExampleTest extends TestCase
              ->seePageIs('/login');
     }
     
+    public function testInvalidEmail()
+    {
+        $this->visit('/login')
+             ->type('abc', 'email')
+             ->press('Login')
+             ->seePageIs('/login');
+    }
+    
     /**
     public function testValidEmailPassword()
     {
@@ -191,6 +199,50 @@ class ExampleTest extends TestCase
              ->seePageIs('/password/reset');
     }
     
+    /** Forgot password page testing **/
+    
+    public function testResetPassTitle()
+    {
+        $this->visit('/password/reset')
+             ->see('Reset Password');
+    }
+    
+    public function testResetEmailTitle()
+    {
+        $this->visit('/password/reset')
+             ->see('E-Mail Address');
+    }
+    
+    public function testSendPassResetTitle()
+    {
+        $this->visit('/password/reset')
+             ->see('Send Password Reset Link');
+    }
+    
+    public function testEmptyResetEmail()
+    {
+        $this->visit('/password/reset')
+             ->press('Send Password Reset Link')
+             ->see('The email field is required.')
+             ->seePageIs('/password/reset');
+    }
+    
+    public function testInvalidResetEmail()
+    {
+        $this->visit('/password/reset')
+             ->type('abc', 'email')
+             ->press('Send Password Reset Link')
+             ->seePageIs('/password/reset');
+    }
+    /** Fix seePageIs when updated
+    public function testValidResetEmail()
+    {
+        $this->visit('/password/reset')
+             ->type('abc@gmail.com', 'email')
+             ->press('Send Password Reset Link')
+             ->seePageIs('/');
+    }
+    **/
     
     
     
