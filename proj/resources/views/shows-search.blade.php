@@ -19,7 +19,7 @@
           <br>
           <div class="form-group input-lg" align="center">
             <div class="input-group">
-              <form class="input-group" action="show/search" method="post">
+              <form class="input-group" action="shows/search" method="post">
                 {{ csrf_field() }}
                 <input type="text" class="form-control input-lg" placeholder="Type the show name" name="search">
                 <span class="input-group-btn">
