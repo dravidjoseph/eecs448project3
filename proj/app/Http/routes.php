@@ -33,6 +33,9 @@ Route::get('facebook/login', function() {
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/shows', function () {
+    return view('shows-search');
+});
 
 Route::get('facebook/authorize', function() {
     return SocialAuth::authorize('facebook');
@@ -42,4 +45,5 @@ Route::auth();
 
 Route::get('/home', 'HomeController@index');
 Route::post('/search', 'MoviesSearchController@search');
+Route::post('/shows/search', 'ShowsSearchController@search');
 Route::get('/movie/{id}', 'MoviesSearchController@show');
