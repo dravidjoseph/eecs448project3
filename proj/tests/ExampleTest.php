@@ -234,6 +234,7 @@ class ExampleTest extends TestCase
              ->press('Send Password Reset Link')
              ->seePageIs('/password/reset');
     }
+    
     /** Fix seePageIs when updated
     public function testValidResetEmail()
     {
@@ -243,6 +244,132 @@ class ExampleTest extends TestCase
              ->seePageIs('/');
     }
     **/
+    
+    /** Register page testing **/
+    
+    public function testRegisterTitle()
+    {
+        $this->visit('/register')
+             ->see('Register');
+    }
+    
+    public function testRegisterNameTitle()
+    {
+        $this->visit('/register')
+             ->see('Name');
+    }
+    
+    public function testRegisterEmailTitle()
+    {
+        $this->visit('/register')
+             ->see('E-Mail Address');
+    }
+    
+    public function testRegisterPasswordTitle()
+    {
+        $this->visit('/register')
+             ->see('Password');
+    }
+    
+    public function testRegisterConfirmTitle()
+    {
+        $this->visit('/register')
+             ->see('Confirm Password');
+    }
+    
+    public function testRegisterEmpty()
+    {
+        $this->visit('/register')
+             ->press('Register')
+             ->see('The name field is required.')
+             ->see('The email field is required.')
+             ->see('The password field is required.')
+             ->seePageIs('/register');
+    }
+    
+    
+    /**  Need email page to work. If enter any valid email it redirects no matter what.
+    
+    public function testRegisterNoName()
+    {
+        $this->visit('/register')
+             ->type('abc@gmail.com', 'email')
+             ->type('12345', 'password')
+             ->type('12345', 'password_confirmation')
+             ->press('Register')
+             ->see('The name field is required.')
+             ->seePageIs('/register');
+    }
+    
+    public function testRegisterNoEmail()
+    {
+        $this->visit('/register')
+             ->type('Richard', 'name')
+             ->type('12345', 'password')
+             ->type('12345', 'password_confirmation')
+             ->press('Register')
+             ->see('The email field is required.')
+             ->seePageIs('/register');
+    }
+    
+    public function testRegisterNoPassword()
+    {
+        $this->visit('/register')
+             ->type('Richard', 'name')
+             ->type('abc@gmail.com', 'email')
+             ->press('Register')
+             ->see('The password field is required.')
+             ->seePageIs('/register');
+    }
+    
+    public function testRegisterNoConfirmPassword()
+    {
+        $this->visit('/register')
+             ->type('Richard', 'name')
+             ->type('abc@gmail.com', 'email')
+             ->type('12345', 'password')
+             ->press('Register')
+             ->see('The password confirmation does not match.')
+             ->seePageIs('/register');
+    }
+    
+    public function testRegisterInvalidConfirmPassword()
+    {
+        $this->visit('/register')
+             ->type('Richard', 'name')
+             ->type('abc@gmail.com', 'email')
+             ->type('12345', 'password')
+             ->type('1234', 'password_confirmation')
+             ->press('Register')
+             ->see('The password confirmation does not match.')
+             ->seePageIs('/register');
+    }
+    
+    public function testRegisterInvalidEmail()
+    {
+        $this->visit('/register')
+             ->type('Richard', 'name')
+             ->type('abc', 'email')
+             ->type('12345', 'password')
+             ->type('12345', 'password_confirmation')
+             ->press('Register')
+             ->seePageIs('/register');
+    }
+    
+    public function testRegisterValid()
+    {
+        $this->visit('/register')
+             ->type('Richard', 'name')
+             ->type('abc@gmail.com', 'email')
+             ->type('12345', 'password')
+             ->type('12345', 'password_confirmation')
+             ->press('Register')
+             ->seePageIs('/');  Update to correct url when updated
+    }
+    **/
+    
+    
+    
     
     
     
