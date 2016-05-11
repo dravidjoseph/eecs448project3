@@ -28,9 +28,8 @@
                     <div class="panel-body">
                       @foreach ($season as $episode)
                         <li class="media">
-                          <a href="{{$episode['id']}}" class="pull-left" target="_blank"></a>
                           <div class="media-body">
-                            <h4 class="media-heading">{{$episode['number']}} - {{$episode['title']}}</h4>
+                            <a href="/episode/{{$episode['id']}}"><h4 class="media-heading">{{$episode['number']}} - {{$episode['title']}}</h4></a>
                             <p>
                             </p>
                           </div>

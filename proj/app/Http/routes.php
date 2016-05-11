@@ -48,3 +48,4 @@ Route::post('/search', 'MoviesSearchController@search');
 Route::post('/shows/search', 'ShowsSearchController@search');
 Route::get('/movie/{id}', 'MoviesSearchController@show');
 Route::get('/show/{id}', 'ShowsSearchController@show');
+Route::get('/episode/{id}', 'ShowsSearchController@showEpisode');
