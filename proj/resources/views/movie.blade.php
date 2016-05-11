@@ -20,9 +20,13 @@
                 <div class="media-body">
                   <h4 class="media-heading">{{$source['display_name']}}</h4>
                   <p>
-                  	@foreach ($source['formats'] as $option)
-                  		- {{ucfirst($option['type'])}}: $ {{$option['price']}} ({{$option['format']}}) 
-                  	@endforeach
+                    @if ($source['formats'] != null)
+                     	@foreach ($source['formats'] as $option)
+                  		  - {{ucfirst($option['type'])}}: $ {{$option['price']}} ({{$option['format']}}) 
+                  	  @endforeach
+                    @else
+                      <-- Visit website for more details
+                    @endif
                   </p>
                 </div>
               </li>
