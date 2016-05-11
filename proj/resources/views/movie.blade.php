@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-4">
             <img src="{{$movie['poster_240x342']}}" class="center-block img-responsive">
-            <h1>{{$movie['title']}}</h1>
+            <h1>{{$movie['title'] ($movie['release_year'])}}</h1>
             <p></p>
             <p>Length: {{gmdate("H:i:s",$movie['duration'])}}</p>
             <p>{{$movie['overview']}}</p>
