@@ -53,7 +53,8 @@
                                 <button type="submit" class="btn btn-primary">
                                     <i class="fa fa-btn fa-sign-in"></i><a href = "facebook/authorize">Login with Facebook</a>
                                 </button>
-								<br>
+							</div>
+							<div class="col-md-6">
 								<a href = "facebook/authorize">
                                 <button type = "button" class="btn btn-primary">
                                     <i class="fa fa-btn fa-sign-in"></i>Login with Facebook
