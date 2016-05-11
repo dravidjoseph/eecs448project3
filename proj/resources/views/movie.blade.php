@@ -17,7 +17,7 @@
               @if ($movie['purchase_web_sources'] != null)
                 @foreach ($movie['purchase_web_sources'] as $source)
               @else
-                {{$movie['subscription_web_sources']['source']}}{{$movie['subscription_web_sources']['display_name'}}{{$movie['subscription_web_sources']['link'}}
+                <p>{{$movie['subscription_web_sources']['source']}}{{$movie['subscription_web_sources']['display_name'}}{{$movie['subscription_web_sources']['link'}}</p>
               @endif
               <li class="media">
                 <a href="{{$source['link']}}" class="pull-left" target="_blank"><i class="fa fa-3x fa-fw fa-play-circle"></i></a>
