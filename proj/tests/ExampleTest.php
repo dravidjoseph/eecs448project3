@@ -33,6 +33,12 @@ class ExampleTest extends TestCase
              ->see('Register');
     }
     
+    public function testTitleShows()
+    {
+        $this->visit('/')
+             ->see('Shows');
+    }
+    
     public function testHeader()
     {
         $this->visit('/')
@@ -88,6 +94,13 @@ class ExampleTest extends TestCase
              ->seePageIs('/');
     }
     
+    public function testShowsButton()
+    {
+        $this->visit('/')
+             ->click('Shows')
+             ->seePageIs('/shows');
+    }
+    
     public function testHomeButton()
     {
         $this->visit('/')
@@ -134,6 +147,12 @@ class ExampleTest extends TestCase
     {
         $this->visit('/login')
              ->see('Forgot Your Password?');
+    }
+    
+    public function testLoginFBTitle()
+    {
+        $this->visit('/login')
+             ->see('Login with Facebook');
     }
     
     public function testCheckBox()
@@ -378,7 +397,7 @@ class ExampleTest extends TestCase
              ->see('Star Wars');
     }
     
-    public function testSearchMoreInfoTitle()   /** Ask about testing for pictures and if there is going to be movie/tv shows titles **/
+    public function testSearchMoreInfoTitle() 
     {
         $this->visit('/')
              ->type('Star Wars', 'search')
@@ -407,22 +426,13 @@ class ExampleTest extends TestCase
              ->see('Star Wars');
     }
     
-    public function testResultsHCYWTitle()   /** Dont know how to test link buttons or about picture for movie **/
+    public function testResultsHCYWTitle()   
     {
         $this->visit('/')
              ->type('Star Wars', 'search')
              ->press('Search')
              ->click('More Information')
              ->see('How can you watch?');
-    }
-    
-    public function testResultsLinkTitle()
-    {
-        $this->visit('/')
-             ->type('Star Wars', 'search')
-             ->press('Search')
-             ->click('More Information')
-             ->see('iTunes');
     }
     
     public function testResultsParagraph()
@@ -434,6 +444,108 @@ class ExampleTest extends TestCase
              ->see('Length')
              ->see('Lucasfilm');
     }
+    
+    public function testResultsLinkTitle()
+    {
+        $this->visit('/')
+             ->type('Star Wars', 'search')
+             ->press('Search')
+             ->click('More Information')
+             ->see('iTunes');
+    }
+    /** FIgure out how to test
+    public function testResultsPlayButton()
+    {
+        $this->visit('/')
+             ->type('Star Wars', 'search')
+             ->press('Search')
+             ->click('More Information')
+             ->click('.fa-play-circle');
+             
+    }**/
+    
+    
+    /** Shows page testing **/
+    
+    public function testShowsHeader()
+    {
+        $this->visit('/')
+             ->click('Shows')
+             ->see('Wanna know how to watch your favorite show?');
+    }
+    
+    public function testShowsParagraph()
+    {
+        $this->visit('/')
+             ->click('Shows')
+             ->see('Check it out right now!');
+    }
+    
+    public function testShowsSearch()
+    {
+        $this->visit('/')
+             ->click('Shows')
+             ->see('Search');
+    }
+    
+    public function testShowsTextBox()
+    {
+        $this->visit('/')
+             ->click('Shows')
+             ->see('Type the show name');
+    }
+    
+    public function testShowsSearchButtonEmpty()
+    {
+        $this->visit('/shows')
+             ->press('Search')
+             ->seePageIs('/shows')
+             ->see('The search field is required.');
+    }
+    
+    public function testShowsSearchRandom()
+    {
+        $this->visit('/shows')
+             ->type('lkajsdkljflasjdfj', 'search')
+             ->press('Search')
+             ->seePageIs('/shows/search');
+    }
+    
+    public function testShowsSearchButtonValid()
+    {
+        $this->visit('/shows')
+             ->type('the walking dead', 'search')
+             ->press('Search')
+             ->seePageIs('/shows/search');
+    }
+    
+    /** Shows Search page testing **/
+    
+    public function testShowsSearchMovieTitle()
+    {
+        $this->visit('/shows')
+             ->type('the walking dead', 'search')
+             ->press('Search')
+             ->see('the walking dead');
+    }
+    
+    public function testShowsSearchMoreInfoTitle()   
+    {
+        $this->visit('/shows')
+             ->type('the walking dead', 'search')
+             ->press('Search')
+             ->see('More Information');
+    }
+    /** wait for update 
+    public function testShowsSearchMoreInfoButton()
+    {
+        $this->visit('/shows')
+             ->type('the walking dead', 'search')
+             ->press('Search')
+             ->click('More Information')
+             ->seePageIs('/);
+    }
+    **/
     
     
 }
