@@ -59,13 +59,13 @@ class Shows
      * @param  int  $id
      * @return array
      */
-    public function listEpisodes($id)
+    public function listEpisodes($id,$start)
     {
-        $searchUrl = $this->apiUrl.$this->apiKey."/show/".$id."/episodes/all/0/100/all/web/false?reverse_ordering=true";
+        $searchUrl = $this->apiUrl.$this->apiKey."/show/".$id."/episodes/all/".$start."/100/all/web/false?reverse_ordering=true";
         $searchResponse = file_get_contents($searchUrl);
         $searchObj = json_decode($searchResponse, true);
 
-        return $searchObj["results"];
+        return $searchObj;
     }
 
     /**
@@ -76,15 +76,35 @@ class Shows
      */
     public function getSeasonEpisodes($id)
     {
-        $list = $this->listEpisodes($id);
         $seasons = array();
-        foreach ($list as $episode) {
-            $seasons[$episode["season_number"]][$episode["episode_number"]] = [
-                "id" => $episode["id"],
-                "number" => $episode["episode_number"],
-                "title" => $episode["title"]
-            ];
+        $start = 0;
+        $list = $this->listEpisodes($id,$start);
+        while ($list["total_returned"] != 0) {
+            foreach ($list["results"] as $episode) {
+                $seasons[$episode["season_number"]][$episode["episode_number"]] = [
+                    "id" => $episode["id"],
+                    "number" => $episode["episode_number"],
+                    "title" => $episode["title"]
+                ];
+            }
+            $start += 100;
+            $list = $this->listEpisodes($id,$start);
         }
         return $seasons;
+    }
+
+    /**
+     * Get an epiode from the API.
+     *
+     * @param  int  $id
+     * @return array
+     */
+    public function getEpisode($id)
+    {
+        $searchUrl = $this->apiUrl.$this->apiKey."/episode/".$id."/";
+        $searchResponse = file_get_contents($searchUrl);
+        $searchObj = json_decode($searchResponse, true);
+
+        return $searchObj;
     }
 }
