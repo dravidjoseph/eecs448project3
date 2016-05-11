@@ -33,7 +33,13 @@
                 </li>
                 @endforeach
               @else
-                <p>{{$movie['subscription_web_sources']['source']}}{{$movie['subscription_web_sources']['display_name']}}{{$movie['subscription_web_sources']['link']}}</p>
+              <p>
+                @if ($movie['subscription_web_sources'] != null)
+                  {{$movie['subscription_web_sources']['source']}}{{$movie['subscription_web_sources']['display_name']}}{{$movie['subscription_web_sources']['link']}}
+                @else
+                  No subcription information
+                @endif
+              </p>
               @endif
             </ul>
             <p></p>
