@@ -35,12 +35,6 @@ Route::get('facebook/login', function() {
     return Redirect::intended();
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/shows', function () {
-    return view('shows-search');
-});
 
 Route::auth();
 
@@ -49,6 +43,12 @@ Route::get('facebook/authorize', function() {
 });
 
 Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    Route::get('/shows', function () {
+        return view('shows-search');
+    });
     Route::get('/home', 'HomeController@index');
     Route::post('/search', 'MoviesSearchController@search');
     Route::post('/shows/search', 'ShowsSearchController@search');
