@@ -16,25 +16,25 @@
             <ul class="media-list">
               @if ($movie['purchase_web_sources'] != null)
                 @foreach ($movie['purchase_web_sources'] as $source)
+                <li class="media">
+                  <a href="{{$source['link']}}" class="pull-left" target="_blank"><i class="fa fa-3x fa-fw fa-play-circle"></i></a>
+                  <div class="media-body">
+                    <h4 class="media-heading">{{$source['display_name']}}</h4>
+                    <p>
+                      @if ($source['formats'] != null)
+                        @foreach ($source['formats'] as $option)
+                          - {{ucfirst($option['type'])}}: $ {{$option['price']}} ({{$option['format']}}) 
+                        @endforeach
+                      @else
+                        <-- Visit website for more details
+                      @endif
+                    </p>
+                  </div>
+                </li>
+                @endforeach
               @else
                 <p>{{$movie['subscription_web_sources']['source']}}{{$movie['subscription_web_sources']['display_name'}}{{$movie['subscription_web_sources']['link'}}</p>
               @endif
-              <li class="media">
-                <a href="{{$source['link']}}" class="pull-left" target="_blank"><i class="fa fa-3x fa-fw fa-play-circle"></i></a>
-                <div class="media-body">
-                  <h4 class="media-heading">{{$source['display_name']}}</h4>
-                  <p>
-                    @if ($source['formats'] != null)
-                     	@foreach ($source['formats'] as $option)
-                  		  - {{ucfirst($option['type'])}}: $ {{$option['price']}} ({{$option['format']}}) 
-                  	  @endforeach
-                    @else
-                      <-- Visit website for more details
-                    @endif
-                  </p>
-                </div>
-              </li>
-              @endforeach
             </ul>
             <p></p>
         </div>
