@@ -34,7 +34,7 @@
                 @endforeach
               @else
               <p>
-                @if ($movie['subscription_web_sources'][0] != null)
+                @if ($movie['subscription_web_sources'] != null)
                   {{$movie['subscription_web_sources'][0]['source']}}{{$movie['subscription_web_sources'][0]['display_name']}}{{$movie['subscription_web_sources'][0]['link']}}
                 @else
                   No subcription information
