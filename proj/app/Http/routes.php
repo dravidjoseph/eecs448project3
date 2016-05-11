@@ -42,15 +42,17 @@ Route::get('/shows', function () {
     return view('shows-search');
 });
 
+Route::auth();
+
 Route::get('facebook/authorize', function() {
     return SocialAuth::authorize('facebook');
 });
 
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
-Route::post('/search', 'MoviesSearchController@search');
-Route::post('/shows/search', 'ShowsSearchController@search');
-Route::get('/movie/{id}', 'MoviesSearchController@show');
-Route::get('/show/{id}', 'ShowsSearchController@show');
-Route::get('/episode/{id}', 'ShowsSearchController@showEpisode');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', 'HomeController@index');
+    Route::post('/search', 'MoviesSearchController@search');
+    Route::post('/shows/search', 'ShowsSearchController@search');
+    Route::get('/movie/{id}', 'MoviesSearchController@show');
+    Route::get('/show/{id}', 'ShowsSearchController@show');
+    Route::get('/episode/{id}', 'ShowsSearchController@showEpisode');
+});
